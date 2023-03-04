@@ -1,0 +1,2 @@
+python檔案轉為應用程式==>在TERMINAL執行auto-py-to-exe
+應用程式檔轉為安裝檔==>用NSIS
