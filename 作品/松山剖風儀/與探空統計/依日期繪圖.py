@@ -11,7 +11,7 @@ file = glob.glob("C:/Users/steve/Desktop/python相關資料/觀測rowdata/統計
 for f in file:
     # print(f)
     day = f[47:57]
-    # print(day)
+    print(day)
     wb =load_workbook(f)
     wsv = wb['風速']
     wsd = wb['風向']
