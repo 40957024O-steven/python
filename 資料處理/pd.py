@@ -2,23 +2,22 @@ import pandas as pd
 import numpy as np
 
 df = pd.read_csv("C:/Users/steve/Desktop/學校/大三下/學習分析工具實務應用/README.md/text.csv",encoding = 'BIG5')
-print(df)
+# print(df)
 team = df[['類別','參加人數']]
-print(team) # 印出**欄位的資料
+# print(team) # 印出**欄位的資料
 gb = team.groupby(['類別'])['參加人數'].sum().reset_index() #team.groupby(['A'])['B'].sum().reset_index() ==> 將A類別相同的B類別中的資料做統計(加總(可作多種統計 例:取最大最小值).重新設定index )
-print(gb)
+# print(gb)
 
 
 
 list1 = [11,22,33,44,55]
 list2 = ['鄭','王','華','明','西']
 
+
 mark1 = pd.Series(list1) #顯示索引標籤
 # print(mark1)
-
 group = pd.Series(list1,index=list2) #將索引標籤設定為目標矩陣
 # print(group)
-
 # print(mark1[1:3])
 # print(group['王'])
 
