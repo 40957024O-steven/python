@@ -8,6 +8,7 @@ team = df[['類別','參加人數']]
 gb = team.groupby(['類別'])['參加人數'].sum().reset_index() #team.groupby(['A'])['B'].sum().reset_index() ==> 將A類別相同的B類別中的資料做統計(加總(可作多種統計 例:取最大最小值).重新設定index )
 # print(gb)
 
+df[df['性別'] == '男性']['統計值'] #列出資料中性別 = 男性的那一列
 
 
 list1 = [11,22,33,44,55]
