@@ -2,6 +2,7 @@ from cmath import sqrt
 import math 
 import random
 import numpy as np
+import statistics
 
 print ( 11 )#輸出數字(可正or負or小數點)
 print ( 10+3-2*(2+2)+4/2 )#加減乘除(符合先乘除後加減)(和括號內先執行)
@@ -27,3 +28,8 @@ print ( sqrt(81) )#開根號
 a = random.randint(-100,100) #產生隨機數字
 print(a)
 print(math.cos(75*np.pi/180)) # 這才是角度
+nb =  [1,2,3,4,5,6,7,8,9,10]
+sigma = statistics.pstdev(nb) # 標準差
+print(sigma)
+mean = statistics.mean(nb) # 平均數
+print(mean)
