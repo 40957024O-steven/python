@@ -107,7 +107,7 @@ for i in Q_1['統計值']:
             minnb  = i
 #哪一個年齡犯罪人數最多?
 Q_7 = max
-# print(Q_7)
+print(Q_7)
 
 
 # 哪個年齡犯罪人數最少
