@@ -8,7 +8,7 @@ team = df[['類別','參加人數']]
 gb = team.groupby(['類別'])['參加人數'].sum().reset_index() #team.groupby(['A'])['B'].sum().reset_index() ==> 將A類別相同的B類別中的資料做統計(加總(可作多種統計 例:取最大最小值).重新設定index )
 # print(gb)
 
-df[df['性別'] == '男性']['統計值'] #列出資料中性別 = 男性的那一列
+# df[df['性別'] == '男性']['統計值'] #列出資料中性別 = 男性的那一列
 
 
 list1 = [11,22,33,44,55]
@@ -47,7 +47,10 @@ date2 = {
 }
 
 student_df2 = pd.DataFrame(date2)
+student_df2=student_df2.drop(student_df2[student_df2['name'] == '黃'].index)
+print(student_df2) #排除某一列資料(可用於比較大小)
 student_df_con = pd.concat([student_df,student_df2],ignore_index=True)#合併資料,ignore_index = Ture(重新排列index)
+
 # print(student_df_con)
 
 # student_df_con.to_csv('try.csv')#儲存檔案成csv檔    
